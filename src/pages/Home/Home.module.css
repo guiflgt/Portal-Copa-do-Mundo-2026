@@ -1,3 +1,357 @@
-.container {
+/* ============================
+   HOME PAGE - Copa do Mundo 2026
+   ============================ */
+
+.home {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+  color: #ffffff;
+}
+
+/* === HERO BANNER === */
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a0a2e 0%, #2A398D 40%, #0f3460 70%, #0a0e1a 100%);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(60, 172, 59, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(230, 29, 37, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.heroTag {
+  display: inline-block;
+  background: rgba(60, 172, 59, 0.2);
+  border: 1px solid rgba(60, 172, 59, 0.4);
+  color: #3CAC3B;
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.heroHighlight {
+  background: linear-gradient(90deg, #3CAC3B, #E61D25);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #D1D4D1;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.heroCta {
+  margin-top: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #E61D25, #c4161e);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.heroCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(230, 29, 37, 0.4);
+}
+
+/* === CONTAGEM REGRESSIVA === */
+.countdownSection {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
+}
+
+.countdownTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.countdownLocal {
+  font-size: 0.9rem;
+  color: #D1D4D1;
+  margin-bottom: 1.5rem;
+}
+
+.countdownGrid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(42, 57, 141, 0.3);
+  border: 1px solid rgba(42, 57, 141, 0.5);
+  border-radius: 12px;
+  padding: 1.2rem 1.8rem;
+  min-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.countdownItem:hover {
+  transform: scale(1.05);
+}
+
+.countdownNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #ffffff, #D1D4D1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.countdownLabel {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.2rem;
+}
+
+/* === SEÇÕES COMUNS === */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* === RESULTADOS RECENTES === */
+.resultadosSection {
+  padding: 3rem 2rem;
+  background: #111827;
+}
+
+.resultadosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resultadoCard {
+  background: rgba(42, 57, 141, 0.15);
+  border: 1px solid rgba(42, 57, 141, 0.3);
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.resultadoCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(42, 57, 141, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.resultadoGrupo {
+  font-size: 0.75rem;
+  color: #3CAC3B;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resultadoTimes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.bandeira {
+  font-size: 1.3rem;
+}
+
+.placar {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #E61D25;
+  background: rgba(230, 29, 37, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.horario {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3CAC3B;
+  background: rgba(60, 172, 59, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.resultadoInfo {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* === JOGOS DE HOJE === */
+.hojeSection {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #111827 0%, #0f1520 100%);
+}
+
+.cardHoje {
+  border-color: rgba(60, 172, 59, 0.3);
+  background: rgba(60, 172, 59, 0.05);
+}
+
+/* === CARDS DE NAVEGAÇÃO === */
+.cardsSection {
+  padding: 3rem 2rem 4rem;
+  background: #0f1520;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.navCard {
+  position: relative;
+  background: rgba(42, 57, 141, 0.12);
+  border: 1px solid rgba(42, 57, 141, 0.25);
+  border-radius: 16px;
   padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.navCard:hover {
+  transform: translateY(-5px);
+  border-color: #3CAC3B;
+  box-shadow: 0 12px 35px rgba(60, 172, 59, 0.15);
+}
+
+.navCard:hover .navCardArrow {
+  transform: translateX(5px);
+  color: #3CAC3B;
+}
+
+.navCardIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.navCardTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.navCardDesc {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.navCardArrow {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #D1D4D1;
+  transition: all 0.3s ease;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .countdownGrid {
+    gap: 0.8rem;
+  }
+
+  .countdownItem {
+    min-width: 70px;
+    padding: 0.8rem 1rem;
+  }
+
+  .countdownNumber {
+    font-size: 1.8rem;
+  }
+
+  .resultadosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
 }
