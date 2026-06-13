@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 70px;
+  background: linear-gradient(135deg, #1a1d3d 0%, #2A398D 100%);
+  box-shadow: 0 4px 20px rgba(42, 57, 141, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+
+.logoText {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logoAccent {
+  color: #E61D25;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #D1D4D1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  color: #ffffff;
+  background: rgba(60, 172, 59, 0.2);
+  border: 1px solid rgba(60, 172, 59, 0.4);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, #3CAC3B, #E61D25);
+  border-radius: 2px;
+}
