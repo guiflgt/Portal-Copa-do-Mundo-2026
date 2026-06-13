@@ -8,7 +8,6 @@ function Home() {
   const navigate = useNavigate()
   const [countdown, setCountdown] = useState({ dias: 0, horas: 0, minutos: 0, segundos: 0 })
 
-  // Contagem regressiva para a Final: 19 de julho de 2026, 16:00 (horário local)
   useEffect(() => {
     const finalDate = new Date('2026-07-19T16:00:00')
 
@@ -38,7 +37,6 @@ function Home() {
 
   return (
     <div className={styles.home}>
-      {/* === HERO BANNER === */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroContent}>
@@ -59,7 +57,6 @@ function Home() {
         </div>
       </section>
 
-      {/* === CONTAGEM REGRESSIVA PARA A FINAL === */}
       <section className={styles.countdownSection}>
         <h2 className={styles.countdownTitle}>⏱️ Contagem regressiva para a Grande Final</h2>
         <p className={styles.countdownLocal}>MetLife Stadium • Nova York / Nova Jersey • 19 de julho</p>
@@ -83,7 +80,6 @@ function Home() {
         </div>
       </section>
 
-      {/* === RESULTADOS RECENTES === */}
       {jogosEncerrados.length > 0 && (
         <section className={styles.resultadosSection}>
           <h2 className={styles.sectionTitle}>⚽ Resultados Recentes</h2>
@@ -109,7 +105,6 @@ function Home() {
         </section>
       )}
 
-      {/* === JOGOS DE HOJE === */}
       {jogosHoje.length > 0 && (
         <section className={styles.hojeSection}>
           <h2 className={styles.sectionTitle}>🔴 Jogos de Hoje</h2>
@@ -135,7 +130,6 @@ function Home() {
         </section>
       )}
 
-      {/* === CARDS DE NAVEGAÇÃO === */}
       <section className={styles.cardsSection}>
         <h2 className={styles.sectionTitle}>🌎 Explore a Copa</h2>
         <div className={styles.cardsGrid}>

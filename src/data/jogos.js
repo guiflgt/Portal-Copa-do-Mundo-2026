@@ -182,7 +182,6 @@ const jogos = [
     placar: null,
     status: "agendado"
   },
-  // === FASES ELIMINATÓRIAS ===
   {
     id: 13,
     fase: "Oitavas de Final",
