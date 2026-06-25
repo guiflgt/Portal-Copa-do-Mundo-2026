@@ -2,6 +2,7 @@ import { useState } from 'react'
 import selecoes from '../../data/selecoes'
 import FiltroSelecoes from '../../components/FiltroSelecoes/FiltroSelecoes'
 import CardSelecao from '../../components/CardSelecao/CardSelecao'
+import PainelTatico from '../../components/PainelTatico/PainelTatico'
 import styles from './Selecoes.module.css'
 
 function Selecoes() {
@@ -83,6 +84,9 @@ function Selecoes() {
           </button>
         </div>
       )}
+
+      {/* Seção do Painel Tático Interativo (Componente Criativo Obrigatório) */}
+      <PainelTatico />
     </div>
   )
 }

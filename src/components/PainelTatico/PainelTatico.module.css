@@ -1,0 +1,345 @@
+.container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  background: linear-gradient(90deg, #00e676, #00b0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.esquemasBotoes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btnEsquema {
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnEsquema:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.btnEsquemaAtivo {
+  background: #00e676 !important;
+  color: #0c0c1e !important;
+  border-color: #00e676 !important;
+  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.35);
+}
+
+.painelLayout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* O Gramado Virtual */
+.campoWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.campoFutebol {
+  width: 100%;
+  max-width: 500px;
+  height: 480px;
+  background: linear-gradient(180deg, #134e1c 0%, #0d3814 100%);
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.linhaMeio {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.circuloCentral {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.grandeAreaAtaque {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 80px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.grandeAreaDefesa {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 80px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Pino do Jogador */
+.pinoJogador {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+  /* Transições suaves e responsivas ao mudar de coordenadas */
+  transition: top 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              left 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.2s ease;
+}
+
+.pinoJogador:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  z-index: 20;
+}
+
+.pinoIcon {
+  width: 32px;
+  height: 32px;
+  background: #ffeb3b;
+  border: 3px solid #0d3814;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.pinoNumero {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0c0c1e;
+}
+
+.pinoNome {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.pinoJogadorAtivo .pinoIcon {
+  background: #00e676;
+  border-color: #ffffff;
+  box-shadow: 0 0 15px #00e676;
+  transform: scale(1.1);
+}
+
+/* Ficha Técnica Lateral */
+.fichaTecnica {
+  width: 100%;
+  height: 100%;
+}
+
+.fichaPlaceholder {
+  height: 480px;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.cardFicha {
+  height: 480px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fichaHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.fichaNumero {
+  width: 48px;
+  height: 48px;
+  background: #ffeb3b;
+  color: #0c0c1e;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fichaNome {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.fichaPosicao {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #00b0ff;
+  letter-spacing: 0.5px;
+}
+
+.fichaBody {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.fichaInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fichaLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.fichaValor {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ratingBadge {
+  background: #00b0ff;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fichaStatus {
+  margin-top: 10px;
+}
+
+.statusConfirmado {
+  font-size: 0.9rem;
+  color: #00e676;
+  font-weight: 700;
+  display: block;
+  margin-top: 6px;
+}
+
+.btnCloseFicha {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnCloseFicha:hover {
+  background: rgba(255, 59, 48, 0.15);
+  border-color: #ff453a;
+  color: #ff453a;
+}
+
+@media (max-width: 768px) {
+  .painelLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .campoFutebol {
+    height: 380px;
+  }
+  
+  .cardFicha, .fichaPlaceholder {
+    height: auto;
+    min-height: 250px;
+  }
+}
