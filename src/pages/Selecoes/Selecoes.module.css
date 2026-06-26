@@ -13,7 +13,7 @@
 .subtitle {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #00e676;
+  color: var(--color-primary-green);
   text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
@@ -23,7 +23,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text-white);
   margin: 0 0 16px 0;
   background: linear-gradient(135deg, #ffffff 30%, rgba(255, 255, 255, 0.7) 100%);
   -webkit-background-clip: text;
@@ -46,7 +46,7 @@
 }
 
 .highlight {
-  color: #00e676;
+  color: var(--color-primary-green);
   font-weight: 700;
 }
 
@@ -75,7 +75,7 @@
 
 .semResultados h3 {
   font-size: 1.4rem;
-  color: #ffffff;
+  color: var(--color-text-white);
   margin: 0 0 12px 0;
 }
 
@@ -87,7 +87,7 @@
 
 .btnReset {
   padding: 10px 20px;
-  background: #00e676;
+  background: var(--color-primary-green);
   color: #0c0c1e;
   border: none;
   border-radius: 8px;
@@ -97,9 +97,9 @@
 }
 
 .btnReset:hover {
-  background: #00c853;
+  background: #349c33;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+  box-shadow: 0 4px 12px rgba(60, 172, 59, 0.3);
 }
 
 .btnReset:active {

@@ -19,8 +19,8 @@
 }
 
 .hoje {
-  border-color: rgba(255, 59, 48, 0.4);
-  box-shadow: 0 0 15px rgba(255, 59, 48, 0.15);
+  border-color: rgba(230, 29, 37, 0.4);
+  box-shadow: 0 0 15px rgba(230, 29, 37, 0.15);
   position: relative;
 }
 
@@ -32,7 +32,7 @@
   right: 0;
   bottom: 0;
   border-radius: 16px;
-  border: 1px solid rgba(255, 59, 48, 0.3);
+  border: 1px solid rgba(230, 29, 37, 0.3);
   pointer-events: none;
   animation: pulseBorder 2s infinite;
 }
@@ -62,7 +62,7 @@
 .grupo {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #00b0ff;
+  color: var(--color-accent-blue);
   background: rgba(0, 176, 255, 0.1);
   padding: 2px 8px;
   border-radius: 20px;
@@ -71,8 +71,8 @@
 .aoVivoBadge {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #ff453a;
-  background: rgba(255, 59, 48, 0.15);
+  color: var(--color-primary-red);
+  background: rgba(230, 29, 37, 0.15);
   padding: 3px 8px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -121,7 +121,7 @@
 .timeNome {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 .placarWrapper {
@@ -134,12 +134,12 @@
 .placar {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.3);
+  color: var(--color-primary-red);
+  background: rgba(230, 29, 37, 0.15);
   padding: 4px 14px;
   border-radius: 8px;
   letter-spacing: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(230, 29, 37, 0.3);
 }
 
 .placarAoVivo {
@@ -153,7 +153,7 @@
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #00e676;
+  color: var(--color-primary-green);
   animation: pulse 1s infinite alternate;
 }
 
@@ -172,7 +172,7 @@
 .horario {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #00e676;
+  color: var(--color-primary-green);
 }
 
 .dataJogo {

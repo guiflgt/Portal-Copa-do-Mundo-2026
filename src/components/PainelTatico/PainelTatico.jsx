@@ -1,46 +1,46 @@
 import React, { useState } from 'react'
 import styles from './PainelTatico.module.css'
 
-// Posições dos jogadores nos esquemas: 4-3-3, 4-4-2 e 3-5-2 (valores em top/left %)
+// Posições dos jogadores titulares e numeração de camisa informada pelo usuário
 const ESQUEMAS = {
   '4-3-3': [
-    { id: 1, numero: 1, nome: 'Alisson', pos: 'GK', top: 88, left: 50, clube: 'Liverpool', rating: 90 },
-    { id: 2, numero: 2, nome: 'Danilo', pos: 'LD', top: 68, left: 85, clube: 'Juventus', rating: 82 },
-    { id: 3, numero: 3, nome: 'Marquinhos', pos: 'ZAG', top: 72, left: 62, clube: 'PSG', rating: 87 },
-    { id: 4, numero: 4, nome: 'G. Magalhães', pos: 'ZAG', top: 72, left: 38, clube: 'Arsenal', rating: 85 },
-    { id: 5, numero: 6, nome: 'Wendell', pos: 'LE', top: 68, left: 15, clube: 'Porto', rating: 80 },
-    { id: 6, numero: 5, nome: 'B. Guimarães', pos: 'VOL', top: 48, left: 50, clube: 'Newcastle', rating: 86 },
-    { id: 7, numero: 8, nome: 'L. Paquetá', pos: 'MEI', top: 40, left: 30, clube: 'West Ham', rating: 84 },
-    { id: 8, numero: 10, nome: 'Rodrygo', pos: 'MEI', top: 40, left: 70, clube: 'Real Madrid', rating: 88 },
-    { id: 9, numero: 7, nome: 'Raphinha', pos: 'ATA', top: 18, left: 80, clube: 'Barcelona', rating: 86 },
-    { id: 10, numero: 9, nome: 'Endrick', pos: 'ATA', top: 12, left: 50, clube: 'Real Madrid', rating: 85 },
-    { id: 11, numero: 11, nome: 'Vinícius Jr.', pos: 'ATA', top: 18, left: 20, clube: 'Real Madrid', rating: 92 }
+    { id: 1, numero: 1, nome: 'Alisson', pos: 'GK', top: 88, left: 50, clube: 'Liverpool', rating: 89 },
+    { id: 2, numero: 13, nome: 'Danilo', pos: 'LD', top: 68, left: 85, clube: 'Juventus', rating: 81 },
+    { id: 3, numero: 4, nome: 'Marquinhos', pos: 'ZAG', top: 72, left: 62, clube: 'PSG', rating: 87 },
+    { id: 4, numero: 3, nome: 'G. Magalhães', pos: 'ZAG', top: 72, left: 38, clube: 'Arsenal', rating: 85 },
+    { id: 5, numero: 16, nome: 'D. Santos', pos: 'LE', top: 68, left: 15, clube: 'Zenit', rating: 78 },
+    { id: 6, numero: 5, nome: 'Casemiro', pos: 'VOL', top: 48, left: 50, clube: 'Manchester United', rating: 86 },
+    { id: 7, numero: 8, nome: 'B. Guimarães', pos: 'VOL', top: 40, left: 30, clube: 'Newcastle', rating: 85 },
+    { id: 8, numero: 20, nome: 'L. Paquetá', pos: 'MEI', top: 40, left: 70, clube: 'West Ham', rating: 84 },
+    { id: 9, numero: 11, nome: 'Raphinha', pos: 'ATA', top: 18, left: 80, clube: 'Barcelona', rating: 85 },
+    { id: 10, numero: 9, nome: 'M. Cunha', pos: 'ATA', top: 12, left: 50, clube: 'Wolverhampton', rating: 80 },
+    { id: 11, numero: 7, nome: 'Vinicius Jr.', pos: 'ATA', top: 18, left: 20, clube: 'Real Madrid', rating: 91 }
   ],
   '4-4-2': [
-    { id: 1, numero: 1, nome: 'Alisson', pos: 'GK', top: 88, left: 50, clube: 'Liverpool', rating: 90 },
-    { id: 2, numero: 2, nome: 'Danilo', pos: 'LD', top: 68, left: 85, clube: 'Juventus', rating: 82 },
-    { id: 3, numero: 3, nome: 'Marquinhos', pos: 'ZAG', top: 72, left: 62, clube: 'PSG', rating: 87 },
-    { id: 4, numero: 4, nome: 'G. Magalhães', pos: 'ZAG', top: 72, left: 38, clube: 'Arsenal', rating: 85 },
-    { id: 5, numero: 6, nome: 'Wendell', pos: 'LE', top: 68, left: 15, clube: 'Porto', rating: 80 },
-    { id: 6, numero: 5, nome: 'B. Guimarães', pos: 'VOL', top: 52, left: 60, clube: 'Newcastle', rating: 86 },
-    { id: 7, numero: 8, nome: 'L. Paquetá', pos: 'VOL', top: 52, left: 40, clube: 'West Ham', rating: 84 },
-    { id: 8, numero: 10, nome: 'Rodrygo', pos: 'MEI', top: 35, left: 75, clube: 'Real Madrid', rating: 88 },
-    { id: 11, numero: 11, nome: 'Vinícius Jr.', pos: 'MEI', top: 35, left: 25, clube: 'Real Madrid', rating: 92 },
-    { id: 9, numero: 7, nome: 'Raphinha', pos: 'ATA', top: 14, left: 65, clube: 'Barcelona', rating: 86 },
-    { id: 10, numero: 9, nome: 'Endrick', pos: 'ATA', top: 14, left: 35, clube: 'Real Madrid', rating: 85 }
+    { id: 1, numero: 1, nome: 'Alisson', pos: 'GK', top: 88, left: 50, clube: 'Liverpool', rating: 89 },
+    { id: 2, numero: 13, nome: 'Danilo', pos: 'LD', top: 68, left: 85, clube: 'Juventus', rating: 81 },
+    { id: 3, numero: 4, nome: 'Marquinhos', pos: 'ZAG', top: 72, left: 62, clube: 'PSG', rating: 87 },
+    { id: 4, numero: 3, nome: 'G. Magalhães', pos: 'ZAG', top: 72, left: 38, clube: 'Arsenal', rating: 85 },
+    { id: 5, numero: 16, nome: 'D. Santos', pos: 'LE', top: 68, left: 15, clube: 'Zenit', rating: 78 },
+    { id: 6, numero: 5, nome: 'Casemiro', pos: 'VOL', top: 52, left: 60, clube: 'Manchester United', rating: 86 },
+    { id: 7, numero: 8, nome: 'B. Guimarães', pos: 'VOL', top: 52, left: 40, clube: 'Newcastle', rating: 85 },
+    { id: 8, numero: 20, nome: 'L. Paquetá', pos: 'MEI', top: 35, left: 75, clube: 'West Ham', rating: 84 },
+    { id: 9, numero: 11, nome: 'Raphinha', pos: 'MEI', top: 35, left: 25, clube: 'Barcelona', rating: 85 },
+    { id: 10, numero: 9, nome: 'M. Cunha', pos: 'ATA', top: 14, left: 65, clube: 'Wolverhampton', rating: 80 },
+    { id: 11, numero: 7, nome: 'Vinicius Jr.', pos: 'ATA', top: 14, left: 35, clube: 'Real Madrid', rating: 91 }
   ],
   '3-5-2': [
-    { id: 1, numero: 1, nome: 'Alisson', pos: 'GK', top: 88, left: 50, clube: 'Liverpool', rating: 90 },
-    { id: 3, numero: 3, nome: 'Marquinhos', pos: 'ZAG', top: 74, left: 65, clube: 'PSG', rating: 87 },
-    { id: 4, numero: 4, nome: 'G. Magalhães', pos: 'ZAG', top: 75, left: 50, clube: 'Arsenal', rating: 85 },
-    { id: 5, numero: 6, nome: 'Danilo', pos: 'ZAG', top: 74, left: 35, clube: 'Juventus', rating: 82 },
-    { id: 2, numero: 2, nome: 'Raphinha', pos: 'ALA', top: 48, left: 88, clube: 'Barcelona', rating: 86 },
-    { id: 6, numero: 5, nome: 'B. Guimarães', pos: 'VOL', top: 54, left: 62, clube: 'Newcastle', rating: 86 },
-    { id: 7, numero: 8, nome: 'L. Paquetá', pos: 'VOL', top: 54, left: 38, clube: 'West Ham', rating: 84 },
-    { id: 11, numero: 11, nome: 'Wendell', pos: 'ALA', top: 48, left: 12, clube: 'Porto', rating: 80 },
-    { id: 8, numero: 10, nome: 'Rodrygo', pos: 'MEI', top: 34, left: 50, clube: 'Real Madrid', rating: 88 },
-    { id: 9, numero: 7, nome: 'Endrick', pos: 'ATA', top: 14, left: 60, clube: 'Real Madrid', rating: 85 },
-    { id: 10, numero: 9, nome: 'Vinícius Jr.', pos: 'ATA', top: 14, left: 40, clube: 'Real Madrid', rating: 92 }
+    { id: 1, numero: 1, nome: 'Alisson', pos: 'GK', top: 88, left: 50, clube: 'Liverpool', rating: 89 },
+    { id: 3, numero: 4, nome: 'Marquinhos', pos: 'ZAG', top: 74, left: 65, clube: 'PSG', rating: 87 },
+    { id: 4, numero: 3, nome: 'G. Magalhães', pos: 'ZAG', top: 75, left: 50, clube: 'Arsenal', rating: 85 },
+    { id: 2, numero: 13, nome: 'Danilo', pos: 'ZAG', top: 74, left: 35, clube: 'Juventus', rating: 81 },
+    { id: 9, numero: 11, nome: 'Raphinha', pos: 'ALA', top: 48, left: 88, clube: 'Barcelona', rating: 85 },
+    { id: 6, numero: 5, nome: 'Casemiro', pos: 'VOL', top: 54, left: 62, clube: 'Manchester United', rating: 86 },
+    { id: 7, numero: 8, nome: 'B. Guimarães', pos: 'VOL', top: 54, left: 38, clube: 'Newcastle', rating: 85 },
+    { id: 5, numero: 16, nome: 'D. Santos', pos: 'ALA', top: 48, left: 12, clube: 'Zenit', rating: 78 },
+    { id: 8, numero: 20, nome: 'L. Paquetá', pos: 'MEI', top: 34, left: 50, clube: 'West Ham', rating: 84 },
+    { id: 10, numero: 9, nome: 'M. Cunha', pos: 'ATA', top: 14, left: 60, clube: 'Wolverhampton', rating: 80 },
+    { id: 11, numero: 7, nome: 'Vinicius Jr.', pos: 'ATA', top: 14, left: 40, clube: 'Real Madrid', rating: 91 }
   ]
 }
 
@@ -53,9 +53,9 @@ function PainelTatico() {
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
-        <h2 className={styles.titulo}>⚽ Prancheta Tática da Seleção Brasileira</h2>
+        <h2 className={styles.titulo}>⚽ Prancheta Tática - Titulares vs Marrocos</h2>
         <p className={styles.desc}>
-          Clique nos esquemas para reposicionar a equipe em tempo real ou clique nos atletas para analisar a ficha técnica.
+          Estes foram os 11 titulares escalados para a partida contra o Marrocos. Selecione os esquemas táticos ou clique nos atletas para analisar seus atributos.
         </p>
 
         {/* Seleção do Esquema */}
@@ -91,7 +91,7 @@ function PainelTatico() {
               <button
                 key={jogador.id}
                 className={`${styles.pinoJogador} ${
-                  jogadorSelecionado?.id === jogador.id ? styles.pinoJogadorAtivo : ''
+                  jogadorSelecionado?.id === filenameId(jogador.id) ? styles.pinoJogadorAtivo : ''
                 }`}
                 style={{
                   top: `${jogador.top}%`,
@@ -132,7 +132,7 @@ function PainelTatico() {
                 </div>
                 <div className={styles.fichaStatus}>
                   <span className={styles.fichaLabel}>Status na Copa:</span>
-                  <span className={styles.statusConfirmado}>✅ Titular Confirmado</span>
+                  <span className={styles.statusConfirmado}>✅ Titular vs Marrocos</span>
                 </div>
               </div>
               <button
@@ -152,6 +152,11 @@ function PainelTatico() {
       </div>
     </div>
   )
+  
+  // Função interna para comparação segura
+  function filenameId(id) {
+    return id;
+  }
 }
 
 export default PainelTatico

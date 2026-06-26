@@ -8,7 +8,7 @@ const estadios = [
     capacidade: 82500,
     descricao: "Sede da grande final em 19 de julho. Localizado em East Rutherford, na região metropolitana de Nova York, é um dos maiores estádios dos EUA.",
     destaque: "Sede da Final",
-    imagem: "/assets/images/metlife.jpg"
+    imagem: ""
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const estadios = [
     capacidade: 70240,
     descricao: "Inaugurado em 2020, é uma das arenas mais modernas do mundo com teto translúcido e tecnologia de ponta.",
     destaque: "Estádio mais moderno",
-    imagem: "/assets/images/sofi.jpg"
+    imagem: ""
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const estadios = [
     capacidade: 80000,
     descricao: "Casa do Dallas Cowboys, impressiona com seu telão gigante de 49m e teto retrátil.",
     destaque: "Telão gigante",
-    imagem: "/assets/images/att.jpg"
+    imagem: ""
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const estadios = [
     capacidade: 65326,
     descricao: "Localizado em Miami Gardens, completamente renovado com cobertura parcial e atmosfera tropical.",
     destaque: "Clima tropical",
-    imagem: "/assets/images/hardrock.jpg"
+    imagem: ""
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const estadios = [
     capacidade: 71000,
     descricao: "Estádio futurista com teto retrátil em formato de pétala e fachada de LED com 4.000m².",
     destaque: "Teto em pétala",
-    imagem: "/assets/images/mercedes.jpg"
+    imagem: ""
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const estadios = [
     capacidade: 65878,
     descricao: "Casa do New England Patriots e Revolution, localizado em Foxborough, região de Boston.",
     destaque: "Tradição esportiva",
-    imagem: "/assets/images/gillette.jpg"
+    imagem: ""
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const estadios = [
     capacidade: 72220,
     descricao: "Primeiro estádio da NFL com teto retrátil, localizado no coração do Texas.",
     destaque: "Teto retrátil pioneiro",
-    imagem: "/assets/images/nrg.jpg"
+    imagem: ""
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const estadios = [
     capacidade: 76416,
     descricao: "Considerado um dos estádios mais barulhentos do mundo, detém o recorde de maior volume de torcida.",
     destaque: "Recorde de barulho",
-    imagem: "/assets/images/arrowhead.jpg"
+    imagem: ""
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ const estadios = [
     capacidade: 69176,
     descricao: "Casa do Philadelphia Eagles, conhecida pela torcida apaixonada e atmosfera intensa.",
     destaque: "Torcida intensa",
-    imagem: "/assets/images/lincoln.jpg"
+    imagem: ""
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ const estadios = [
     capacidade: 68500,
     descricao: "Localizado em Santa Clara, no coração do Vale do Silício, é referência em sustentabilidade.",
     destaque: "Sustentável",
-    imagem: "/assets/images/levis.jpg"
+    imagem: ""
   },
   {
     id: 11,
@@ -118,7 +118,7 @@ const estadios = [
     capacidade: 69000,
     descricao: "Conhecido por sua atmosfera elétrica e barulhenta, é casa do Seattle Sounders.",
     destaque: "Atmosfera elétrica",
-    imagem: "/assets/images/lumen.jpg"
+    imagem: ""
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ const estadios = [
     capacidade: 87523,
     descricao: "Lendário! Primeiro estádio a sediar jogos em 3 Copas do Mundo (1970, 1986 e 2026). Palco do jogo de abertura México 2×0 África do Sul.",
     destaque: "3ª Copa do Mundo",
-    imagem: "/assets/images/azteca.jpg"
+    imagem: ""
   },
   {
     id: 13,
@@ -140,7 +140,7 @@ const estadios = [
     capacidade: 49850,
     descricao: "Casa do Chivas, o Akron impressiona com sua arquitetura vulcânica e a atmosfera do futebol mexicano.",
     destaque: "Arquitetura vulcânica",
-    imagem: "/assets/images/akron.jpg"
+    imagem: ""
   },
   {
     id: 14,
@@ -151,7 +151,7 @@ const estadios = [
     capacidade: 53500,
     descricao: "Considerado um dos estádios mais bonitos da América Latina, com design moderno premiado internacionalmente.",
     destaque: "Design premiado",
-    imagem: "/assets/images/bbva.jpg"
+    imagem: ""
   },
   {
     id: 15,
@@ -162,7 +162,7 @@ const estadios = [
     capacidade: 45500,
     descricao: "Principal estádio de futebol do Canadá, com expansão especial de capacidade para a Copa 2026.",
     destaque: "Principal sede canadense",
-    imagem: "/assets/images/bmo.jpg"
+    imagem: ""
   },
   {
     id: 16,
@@ -173,7 +173,7 @@ const estadios = [
     capacidade: 54500,
     descricao: "Estádio coberto com teto retrátil em Vancouver, oferecendo vista deslumbrante das montanhas da costa oeste.",
     destaque: "Vista para as montanhas",
-    imagem: "/assets/images/bcplace.jpg"
+    imagem: ""
   }
 ]
 

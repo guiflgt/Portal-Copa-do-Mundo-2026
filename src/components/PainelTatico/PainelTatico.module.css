@@ -18,9 +18,9 @@
 .titulo {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text-white);
   margin: 0 0 10px 0;
-  background: linear-gradient(90deg, #00e676, #00b0ff);
+  background: linear-gradient(90deg, var(--color-primary-green), var(--color-accent-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -42,7 +42,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--color-text-white);
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -54,10 +54,10 @@
 }
 
 .btnEsquemaAtivo {
-  background: #00e676 !important;
+  background: var(--color-primary-green) !important;
   color: #0c0c1e !important;
-  border-color: #00e676 !important;
-  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.35);
+  border-color: var(--color-primary-green) !important;
+  box-shadow: 0 4px 15px rgba(60, 172, 59, 0.35);
 }
 
 .painelLayout {
@@ -67,7 +67,7 @@
   align-items: start;
 }
 
-/* O Gramado Virtual */
+/* O Campo de Futebol 2D */
 .campoWrapper {
   width: 100%;
   display: flex;
@@ -175,7 +175,7 @@
 .pinoNome {
   font-size: 0.72rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text-white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
   background: rgba(0, 0, 0, 0.5);
   padding: 1px 6px;
@@ -184,9 +184,9 @@
 }
 
 .pinoJogadorAtivo .pinoIcon {
-  background: #00e676;
-  border-color: #ffffff;
-  box-shadow: 0 0 15px #00e676;
+  background: var(--color-primary-green);
+  border-color: var(--color-text-white);
+  box-shadow: 0 0 15px var(--color-primary-green);
   transform: scale(1.1);
 }
 
@@ -251,7 +251,7 @@
 .fichaNome {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text-white);
   margin: 0 0 4px 0;
 }
 
@@ -259,7 +259,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #00b0ff;
+  color: var(--color-accent-blue);
   letter-spacing: 0.5px;
 }
 
@@ -286,13 +286,13 @@
 
 .fichaValor {
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--color-text-white);
   font-weight: 600;
 }
 
 .ratingBadge {
-  background: #00b0ff;
-  color: #ffffff;
+  background: var(--color-accent-blue);
+  color: var(--color-text-white);
   padding: 4px 10px;
   border-radius: 6px;
   font-weight: 700;
@@ -305,7 +305,7 @@
 
 .statusConfirmado {
   font-size: 0.9rem;
-  color: #00e676;
+  color: var(--color-primary-green);
   font-weight: 700;
   display: block;
   margin-top: 6px;
@@ -317,16 +317,16 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--color-text-white);
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btnCloseFicha:hover {
-  background: rgba(255, 59, 48, 0.15);
-  border-color: #ff453a;
-  color: #ff453a;
+  background: rgba(230, 29, 37, 0.15);
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
 }
 
 @media (max-width: 768px) {

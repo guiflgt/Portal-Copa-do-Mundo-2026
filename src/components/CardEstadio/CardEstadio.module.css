@@ -13,8 +13,8 @@
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 230, 118, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 230, 118, 0.15);
+  border-color: rgba(60, 172, 59, 0.4);
+  box-shadow: 0 12px 30px rgba(60, 172, 59, 0.15);
 }
 
 .imageContainer {
@@ -94,7 +94,7 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: #00e676;
+  background: var(--color-primary-green);
   color: #0c0c1e;
   font-size: 0.75rem;
   font-weight: 700;
@@ -102,7 +102,7 @@
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(0, 230, 118, 0.3);
+  box-shadow: 0 4px 10px rgba(60, 172, 59, 0.3);
   z-index: 2;
 }
 
@@ -138,7 +138,7 @@
 .nome {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text-white);
   margin: 0;
 }
 
@@ -159,7 +159,7 @@
 
 .capacidadeValor {
   font-size: 0.85rem;
-  color: #00b0ff;
+  color: var(--color-accent-blue);
   font-weight: 600;
 }
 
